@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Calculator</title>
+	<script type="text/javascript">
+		var num=0;
+		var a1;
+		function display(a)
+		{	
+				
+ 				
+				calc.disp.value=calc.disp.value+a;
+				//var a1=a1+calc.disp.value;
+				//alert(a1);
+				//a1=a;
+				//num=num+parseInt(a);
+
+				//calc.disp.value=num;
+		}
+		function solve()
+		{
+			//alert(a1);
+			// num=calc.disp.value+a1;
+			// calc.disp.value="";
+			//var ans=parseInt(a1);
+			//calc.disp.value=ans;
+			let x=calc.disp.value;
+			let ans=eval(x);
+			calc.disp.value=ans;
+			
+		}
+		// function equal()
+		// {
+		// 	calc.disp.value=num;
+		// }
+
+	</script>
+</head>
+<body>
+<form name="calc" method="post" action="">
+	<input type="text" name="disp" readonly="true">
+	<table name="t1" border="1">
+	
+		<tr>
+			<td><input type="button" name="one" value="1" onclick="display('1')"></td>
+			<td><input type="button" name="two" value="2" onclick="display('2')"></td>
+			<td><input type="button" name="three" value="3" onclick="display('3')"></td>
+			<td><input type="button" name="plus" value="+" onclick="display('+')"></td>
+			<td><input type="button" name="minus" value="-" onclick="display('-')"></td>
+		</tr>
+		<tr>
+			<td><input type="button" name="four" value="4" onclick="display('4')"></td>
+			<td><input type="button" name="five" value="5" onclick="display('5')"></td>
+			<td><input type="button" name="six" value="6" onclick="display('6')"></td>
+			<td><input type="button" name="mult" value="*" onclick="display('*')"></td>
+			<td><input type="button" name="divide" value="/" onclick="display('/')"></td>
+		</tr>
+		<tr>
+			<td><input type="button" name="seven" value="7" onclick="display('7')"></td>
+			<td><input type="button" name="eight" value="8" onclick="display('8')"></td>
+			<td><input type="button" name="nine" value="9" onclick="display('9')"></td>
+			<td><input type="button" name="equal" value="=" onclick="solve()"></td>
+		</tr>
+		<tr>
+		
+			<td colspan="2"><input type="reset" name="CE" value="CE"></td>
+			<td><input type="button" name="zero" value="0" onclick="display('0')"></td>
+		</tr>
+	</table>
+</form>
+</body>
+</html>
